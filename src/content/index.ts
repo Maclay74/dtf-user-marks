@@ -125,6 +125,7 @@ const updateProfileHeader = async (target: Element) => {
 
 const updateAuthor = async (comment: Element) => {
   const nameLink = comment.querySelector('.author__name')
+  const currentBadge = comment.querySelector('.comments__item__badge')
   if (!nameLink) return
 
   // Get user's id from comment
@@ -135,15 +136,16 @@ const updateAuthor = async (comment: Element) => {
   if (!id) return
 
   // Get data from storage
-  if (!badges[id]) return
+  if (!badges[id]) {
+    currentBadge?.remove()
+    return
+  }
 
   const { text = 'нейтрален', type = 'blue' } = badges[id]
   const isNegative = type === 'red'
   const negativeClassName = 'comments__item__badge-red'
 
   // Remove previously added badge
-  const currentBadge = comment.querySelector('.comments__item__badge')
-
   if (currentBadge) {
     const { classList } = currentBadge
 
