@@ -1,0 +1,55 @@
+.profile__badge, .comments__item__badge {
+    border: 1px solid;
+    border-color: var(--theme-color-text-secondary);
+    color: var(--theme-color-text-secondary);
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 26px;
+    padding: 0 5px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: 0.1s background-color, 0.1s color;
+    z-index: calc(var(--layout-z-index-feed) + 2);
+    user-select: none;
+}
+
+.comments__item__badge {
+    display: inline-block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 20px;
+    position: relative;
+    top: -1px;
+}
+
+.profile__badge.profile__badge-red, .comments__item__badge.comments__item__badge-red {
+    border-color: var(--theme-color-signal-negative-default);
+    color: var(--theme-color-signal-negative-default);
+}
+
+.profile__badge:hover {
+    background: var(--theme-color-text-secondary);
+    color: var(--theme-color-background-content);
+}
+
+.profile__badge.profile__badge-red:hover {
+    background: var(--theme-color-signal-negative-default);
+    color: var(--theme-color-background-content);
+}
+
+.modal-badge .modal-fullpage__inner{
+    min-height: 150px;
+    height: auto;
+}
+
+.modal-badge .field {
+    margin-bottom: 10px;
+}
+
+.modal-badge .buttons {
+    justify-content: flex-end;
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
