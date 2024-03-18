@@ -5,7 +5,7 @@
 ## Installing
 
 1. Check if your `Node.js` version is >= **14**.
-2. Change or configurate the name of your extension on `src/manifest`.
+2. Change or configure the name of your extension on `src/manifest`.
 3. Run `npm install` to install the dependencies.
 
 ## Developing

@@ -21,6 +21,14 @@ export default defineManifest({
       js: ['src/content/index.ts'],
     },
   ],
+  // @ts-ignore
+  browser_specific_settings: {
+    gecko: {
+      id: "{d49d6334-11d4-4bfe-a8fc-498d72c18c7b}",
+      strict_min_version: "120.0"
+    }
+  },
+
   permissions: ['storage'],
   host_permissions: ['https://dtf.ru/'],
   web_accessible_resources: [
