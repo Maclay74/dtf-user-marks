@@ -78,40 +78,36 @@ const EditBadgeModal = ({ id, afterSave }: EditBadgeModalProps) => {
   };
 
   return (
-    <div className={"modal-window"}>
-      <div className={"modal-window__header modal-window__header--static"}>
-        <div className={"modal-window__title"}>Редактировать метку</div>
-        <button
-          className={"icon-button modal-window__close"}
-          type={"button"}
-          onClick={onClose}
-        >
-          <svg className={"icon icon--cross"} width="24" height="24">
+    <div className={'modal-window'}>
+      <div className={'modal-window__header modal-window__header--static'}>
+        <div className={'modal-window__title'}>Редактировать метку</div>
+        <button className={'icon-button modal-window__close'} type={'button'} onClick={onClose}>
+          <svg className={'icon icon--cross'} width="24" height="24">
             <use xlinkHref="#cross"></use>
           </svg>
         </button>
       </div>
 
-      <div className={"modal-window__content"} data-scrollable={"true"}>
+      <div className={'modal-window__content'} data-scrollable={'true'}>
         <div className="form-section">
           <div className="form-section__label">Текст</div>
           <div className="field field--default">
             <label className="field__wrapper">
-              <input
-                tabIndex={0}
-                type="text"
-                value={badge?.text}
-                onChange={onChangeText}
-                placeholder=""
-                className="text-input"
-                maxLength={30}
-              />
+              <div className="field__wrapper-body">
+                <input
+                  tabIndex={0}
+                  type="text"
+                  value={badge?.text}
+                  onChange={onChangeText}
+                  placeholder=""
+                  className="text-input"
+                  maxLength={30}
+                />
+              </div>
             </label>
           </div>
 
-          <label
-            className={"checkbox " + (checkboxValue ? "checkbox--checked" : "")}
-          >
+          <label className={'checkbox ' + (checkboxValue ? 'checkbox--checked' : '')}>
             <input
               type="checkbox"
               tabIndex={1}
@@ -120,11 +116,7 @@ const EditBadgeModal = ({ id, afterSave }: EditBadgeModalProps) => {
             />
             <div className="checkbox__control">
               {checkboxValue && (
-                <svg
-                  className="icon icon--tick checkbox__icon"
-                  width="16"
-                  height="16"
-                >
+                <svg className="icon icon--tick checkbox__icon" width="16" height="16">
                   <use xlinkHref="#tick"></use>
                 </svg>
               )}
@@ -134,11 +126,7 @@ const EditBadgeModal = ({ id, afterSave }: EditBadgeModalProps) => {
         </div>
 
         <div className="buttons">
-          <button
-            className="button button--size-l"
-            type="button"
-            onClick={onResetClick}
-          >
+          <button className="button button--size-l" type="button" onClick={onResetClick}>
             Очистить
           </button>
           <button
@@ -151,7 +139,7 @@ const EditBadgeModal = ({ id, afterSave }: EditBadgeModalProps) => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default EditBadgeModal;

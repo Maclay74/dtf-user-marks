@@ -88,7 +88,7 @@ const updateProfileHeader = async (target: Element) => {
   const userId = getUserId()
   if (!userId) return
 
-  const container = target.querySelector('.subsite-header__name')
+  const container = target.querySelector('.subsite-card__name')
   if (!container) return
 
   const { text = 'нейтрально', type = 'blue' } = badges[userId] || {}

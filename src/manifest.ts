@@ -33,6 +33,7 @@ export default defineManifest({
   host_permissions: ['https://dtf.ru/'],
   web_accessible_resources: [
     {
+      use_dynamic_url: false,
       resources: [
         'img/icon16.png',
         'img/icon32.png',
