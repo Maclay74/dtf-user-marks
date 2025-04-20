@@ -1,7 +1,7 @@
 {
   "name": "dtf-user-remarks",
   "displayName": "DTF User Remarks",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "author": "Maclay",
   "description": "Mark users so you never forget what they have done",
   "type": "module",

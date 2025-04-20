@@ -129,7 +129,7 @@ const updateAuthor = async (comment: Element) => {
   if (!nameLink) return
 
   // Get user's id from comment
-  const urlMatch = nameLink.getAttribute('href')?.match(/\/u\/(\d+)/) as [string, number]
+  const urlMatch = nameLink.getAttribute('href')?.match(/id(\d+)/) as [string, number]
   if (!urlMatch) return
 
   const [, id] = urlMatch
@@ -171,6 +171,6 @@ const updateAuthor = async (comment: Element) => {
 }
 
 const getUserId = (): number => {
-  const [, id] = (window.location.pathname.match(/\/u\/(\d+)/) as [string, number]) ?? ['', 0]
+  const [, id] = (window.location.pathname.match(/id(\d+)/) as [string, number]) ?? ['', 0]
   return id
 }
